@@ -54,7 +54,7 @@
                 <h3 class="center-align">What are we watching?</h3>
                 <nav class="teal lighten-3">
                     <div class="nav-wrapper">
-                        <form>
+                        <form id="movie-form">
                             <div class="input-field">
                                 <input id="movie-search" type="search" required>
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
@@ -69,13 +69,13 @@
                 <div class="col sm12 m6 l6">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator movie-image" src="assets/images/movieplaceholder.jpg" alt="movie picture"
-                                height="150px">
+                            <img class="activator movie-image" src="assets/images/movieplaceholder.jpg"
+                                alt="movie picture" height="150px">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4 movie-title">Movie Title<i
                                     class="material-icons right">more_vert</i></span>
-                            <p class="year-rating">Year: 1980  Rating: pg</p>
+                            <p class="year-rating">Year: 1980 Rating: pg</p>
                             <p class="actors">Actors: </p>
                             <p class="rotten">Rotten Tomatoes: 97%</p>
                             <p class="trailer"><a href="#">Trailer Link</a></p>
@@ -83,7 +83,8 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4 movie-title">Movie Title<i
                                     class="material-icons right">close</i></span>
-                            <p class="plot">Plot to your movie or show will appear here. So excited to see what you find!</p>
+                            <p class="plot">Plot to your movie or show will appear here. So excited to see what you
+                                find!</p>
                             <table class="striped">
                                 <thead>
                                     <tr>
@@ -116,54 +117,55 @@
                     </div>
                 </div>
                 <div class="col sm12 m6 l6">
-                        <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator movie-image" src="assets/images/movieplaceholder.jpg" alt="movie picture"
-                                    height="150px">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4 movie-title">Movie Title<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p class="year-rating">Year: 1980  Rating: pg</p>
-                                <p class="actors">Actors: </p>
-                                <p class="rotten">Rotten Tomatoes: 97%</p>
-                                <p class="trailer"><a href="#">Trailer Link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4 movie-title">Movie Title<i
-                                        class="material-icons right">close</i></span>
-                                <p class="plot">Plot to your movie or show will appear here. So excited to see what you find!</p>
-                                <table class="striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Where</th>
-                                            <th>Link</th>
-                                            <th>Item Price</th>
-                                        </tr>
-                                    </thead>
-    
-                                    <tbody>
-                                        <tr>
-                                            <td>Alvin</td>
-                                            <td>Eclair</td>
-                                            <td>$0.87</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alan</td>
-                                            <td>Jellybean</td>
-                                            <td>$3.76</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jonathan</td>
-                                            <td>Lollipop</td>
-                                            <td>$7.00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-    
-                            </div>
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator movie-image" src="assets/images/movieplaceholder.jpg"
+                                alt="movie picture" height="150px">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4 movie-title">Movie Title<i
+                                    class="material-icons right">more_vert</i></span>
+                            <p class="year-rating">Year: 1980 Rating: pg</p>
+                            <p class="actors">Actors: </p>
+                            <p class="rotten">Rotten Tomatoes: 97%</p>
+                            <p class="trailer"><a href="#">Trailer Link</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4 movie-title">Movie Title<i
+                                    class="material-icons right">close</i></span>
+                            <p class="plot">Plot to your movie or show will appear here. So excited to see what you
+                                find!</p>
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <th>Where</th>
+                                        <th>Link</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>Eclair</td>
+                                        <td>$0.87</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alan</td>
+                                        <td>Jellybean</td>
+                                        <td>$3.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jonathan</td>
+                                        <td>Lollipop</td>
+                                        <td>$7.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -175,17 +177,25 @@
     <div class="section white">
         <div class="row container center-align">
             <h3>Who's hungry?</h3>
-            <nav class="teal lighten-3">
-                <div class="nav-wrapper">
-                    <form>
-                        <div class="input-field">
-                            <input id="food-search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                </div>
-            </nav>
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12 m5 l5">
+                      <i class="material-icons prefix">local_dining</i>
+                      <input id="food-search" type="text" class="validate">
+                      <label for="icon_prefix">Restaurant or type of food</label>
+                    </div>
+                    <div class="input-field col s12 m5 l5">
+                      <i class="material-icons prefix">location_searching</i>
+                      <input id="zip-search" type="text" class="validate">
+                      <label for="icon_telephone">Zip Code</label>
+                    </div>
+                    <div class="col s6 m2 l2">
+                        <a class="waves-effect waves-light btn-small" id="yelp-submit">Search</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
         </div>
         <div class="row container">
             <div class="col s12 m8" id="food">
@@ -243,7 +253,8 @@
         <br>
     </div>
     <!-- to the top button -->
-    <a class="btn-floating btn-large waves-effect waves-light teal lighten-3" id="myBtn"><i class="material-icons">arrow_upward</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light teal lighten-3" id="myBtn"><i
+            class="material-icons">arrow_upward</i></a>
     <!-- footer -->
     <footer class="page-footer teal lighten-3">
         <div class="container">
@@ -278,6 +289,8 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- materialize javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- apikey page -->
+    <script src="assets/javascript/apiKey.js"></script>
     <!-- javascript -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
