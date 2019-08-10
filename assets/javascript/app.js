@@ -28,8 +28,10 @@ function topFunction() {
 function randomResult() {
 movieSelect = (Math.floor(Math.random()* movieIndexMax));
 foodSelect = (Math.floor(Math.random()* foodIndexMax));
+$(".food-label").addClass("active");
 var movieText = $("#movie-search").val(movieChoice[movieSelect]);
 var foodText = $("#food-search").val(foodChoice[foodSelect]);
+
 
 }
 
