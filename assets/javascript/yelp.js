@@ -3,24 +3,12 @@ var foodInput = $("#food-search");
 var zipInput = $("#zip-search");
 var yelpLink = "https://api.yelp.com/v3/businesses/search?term="
 var queryURL = "";
-var yelpHead = {
-    method: 'GET',
-    headers: {
-        Authorization: "Bearer " + yelpKey
-    },
-};
-var results = [];
-
-console.log(yelpHead);
 
 //search input calls on API 
 $("#yelp-submit").on("click", function (event) {
     //stop refresh
     event.preventDefault();
     console.log("a button was pressed");
-    //if empty keep cycle
-    // if (event.keyCode == "13"){
-    // console.log("enter was presed");
     if ((foodInput.val().trim() === "") && (zipInput.val().trim() === "")) {
         return;
     }
@@ -53,8 +41,6 @@ function yelpCall() {
     }).then(function (response) {
         console.log(queryURL);
         console.log(response);
-        // storing the data from the AJAX request in the results variable
-        // results = response.data;
         console.log("time to push info");
 
         // Looping through each result item
@@ -68,13 +54,11 @@ function yelpCall() {
 
             console.log("grabbing the individual businesses info");
             //image
-            var resImg = $("<img>").attr("src", response.businesses[i].image_url);
+            var resImg = $("<img height='150px' width='150px'>").attr("src", response.businesses[i].image_url);
             //resturant name
             var resName = $("<div class='card-title'>").text(response.businesses[i].name);
-            //rating
-            var resRate = $("<p>").text(response.businesses[i].rating);
-            //price
-            var resPrice = $("<p>").text(response.businesses[i].price);
+            //rating and price
+            var resRP = $("<p>" + response.businesses[i].rating + "<i class='material-icons tiny'>star</i> Price: " + response.businesses[i].price);
             //category
             var resCategory = $("<p>").text(response.businesses[i].categories[0].title);
             //phone number
@@ -82,14 +66,14 @@ function yelpCall() {
             //address
             var resAddress = $("<p>").text(response.businesses[i].location.display_address);
             //resturant site
-            var resWebsite = $("<a href='" + response.businesses[i].url + "target=_'blank'>Resturant Link</a>");
+            var resWebsite = $("<a href='" + response.businesses[i].url + "target='_blank'>Resturant Link</a>");
             // Appending the information to the resultDiv
             cardImage.append(resImg);
             cardStacked.append(resName, cardContact);
-            cardContact.append(resPrice, resRate, resCategory, resNumber, resAddress, resWebsite);
+            cardContact.append(resRP, resCategory, resNumber, resAddress, resWebsite);
             resultDiv.append(cardImage, cardStacked);
             $("#food").append(resultDiv);
-            console.log(resImg, resName, resPrice, resRate, resCategory, resNumber, resAddress, resWebsite);
+            console.log(resImg, resName, resRP, resCategory, resNumber, resAddress, resWebsite);
         }
     })
 }
