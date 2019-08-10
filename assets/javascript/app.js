@@ -1,5 +1,13 @@
 // global variables
-var foodChoice = ["Afghan","African","Senegalese","South African","American (New)","American (Traditional)","Arabian","Argentine","Armenian","Asian Fusion","Australian","Austrian","Bangladeshi","Barbeque","Basque","Belgian","Brasseries","Brazilian","Breakfast & Brunch","British","Buffets","Burgers","Burmese","Cafes","Themed Cafes","Cafeteria","Cajun/Creole","Cambodian","Caribbean","Dominican","Haitian","Puerto Rican","Trinidadian","Catalan","Cheesesteaks","Chicken Shop","Chicken Wings","Chinese","Cantonese","Dim Sum","Hainan","Shanghainese","Szechuan","Comfort Food","Creperies","Cuban","Czech","Delis","Diners","Dinner Theater", "Ethiopian","Fast Food","Filipino","Fish & Chips","Fondue","Food Court","Food Stands","French","Mauritius","Reunion","Game Meat","Gastropubs","German","Gluten-Free","Greek","Guamanian","Halal","Hawaiian","Himalayan/Nepalese","Honduran","Hong Kong Style Cafe","Hot Dogs","Hot Pot","Hungarian","Iberian","Indian","Indonesian","Irish","Italian","Calabrian","Sardinian","Sicilian","Tuscan","Japanese","Conveyor Belt Sushi","Izakaya","Japanese Curry","Ramen","Teppanyaki","Kebab","Korean","Kosher","Laotian","Latin American","Colombian","Salvadoran","Venezuelan","Live/Raw Food","Malaysian","Mediterranean","Falafel","Mexican","Tacos","Middle Eastern","Egyptian","Lebanese","Modern European","Mongolian","Moroccan","New Mexican Cuisine","Nicaraguan","Noodles","Pakistani","Pan Asia","Persian/Iranian","Peruvian","Pizza","Polish","Polynesian","Pop-Up Restaurants","Portuguese","Poutineries","Russian","Salad","Sandwiches","Scandinavian","Scottish","Seafood","Singaporean","Slovakian","Soul Food","Soup","Southern","Spanish","Sri Lankan","Steakhouses","Supper Clubs","Sushi Bars","Syrian","Taiwanese","Tapas Bars","Tapas/Small Plates","Tex-Mex","Thai","Turkish","Ukrainian","Uzbek","Vegan","Vegetarian","Vietnamese","Waffles","Wraps"];
+var foodChoice = ["Afghan", "African", "Senegalese", "South African", "American (New)", "American (Traditional)", "Arabian", "Argentine", "Armenian", "Asian Fusion", "Australian", "Austrian", "Bangladeshi", "Barbeque", "Basque", "Belgian", "Brasseries", "Brazilian", "Breakfast & Brunch", "British", "Buffets", "Burgers", "Burmese", "Cafes", "Themed Cafes", "Cafeteria", "Cajun/Creole", "Cambodian", "Caribbean", "Dominican", "Haitian", "Puerto Rican", "Trinidadian", "Catalan", "Cheesesteaks", "Chicken Shop", "Chicken Wings", "Chinese", "Cantonese", "Dim Sum", "Hainan", "Shanghainese", "Szechuan", "Comfort Food", "Creperies", "Cuban", "Czech", "Delis", "Diners", "Dinner Theater", "Ethiopian", "Fast Food", "Filipino", "Fish & Chips", "Fondue", "Food Court", "Food Stands", "French", "Mauritius", "Reunion", "Game Meat", "Gastropubs", "German", "Gluten-Free", "Greek", "Guamanian", "Halal", "Hawaiian", "Himalayan/Nepalese", "Honduran", "Hong Kong Style Cafe", "Hot Dogs", "Hot Pot", "Hungarian", "Iberian", "Indian", "Indonesian", "Irish", "Italian", "Calabrian", "Sardinian", "Sicilian", "Tuscan", "Japanese", "Conveyor Belt Sushi", "Izakaya", "Japanese Curry", "Ramen", "Teppanyaki", "Kebab", "Korean", "Kosher", "Laotian", "Latin American", "Colombian", "Salvadoran", "Venezuelan", "Live/Raw Food", "Malaysian", "Mediterranean", "Falafel", "Mexican", "Tacos", "Middle Eastern", "Egyptian", "Lebanese", "Modern European", "Mongolian", "Moroccan", "New Mexican Cuisine", "Nicaraguan", "Noodles", "Pakistani", "Pan Asia", "Persian/Iranian", "Peruvian", "Pizza", "Polish", "Polynesian", "Pop-Up Restaurants", "Portuguese", "Poutineries", "Russian", "Salad", "Sandwiches", "Scandinavian", "Scottish", "Seafood", "Singaporean", "Slovakian", "Soul Food", "Soup", "Southern", "Spanish", "Sri Lankan", "Steakhouses", "Supper Clubs", "Sushi Bars", "Syrian", "Taiwanese", "Tapas Bars", "Tapas/Small Plates", "Tex-Mex", "Thai", "Turkish", "Ukrainian", "Uzbek", "Vegan", "Vegetarian", "Vietnamese", "Waffles", "Wraps"];
+
+var movieChoice = ["Action & Adventure", "Anime", "Children & Family Movies", "Classic Movies", "Comedies", "Cult Movies", "Documentaries", "Dramas", "Faith & Spirituality", "Gay & Lesbian Movies", "Horror Movies", "Independent Movies", "International Movies", "Musical", "Period Pieces", "Romantic Movies", "Sci-Fi & Fantasy", "Sports & Fitness", "TV Shows", "Thrillers"];
+
+var movieSelect;
+var foodSelect;
+var movieIndexMax = movieChoice.length;
+var foodIndexMax = foodChoice.length;
+
 // global functions 
 
 // when the user scrolls down the button displays
@@ -17,17 +25,28 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+function randomResult() {
+movieSelect = (Math.floor(Math.random()* movieIndexMax));
+foodSelect = (Math.floor(Math.random()* foodIndexMax));
+var movieText = $("#movie-search").val(movieChoice[movieSelect]);
+var foodText = $("#food-search").val(foodChoice[foodSelect]);
+
+}
+
+
 // =============================================================================================
 // main app logic
 // =============================================================================================
 
-$(document).ready(function(){
-    $('.parallax').parallax();
+$(document).ready(function () {
+  $('.parallax').parallax();
+  $("#random-button").on("click", randomResult);
 
-    
-    window.onscroll = function() {scrollFunction()};
-    $(document.body).on("click", "#myBtn", function(){
-      topFunction();
-    });
+
+  window.onscroll = function () {
+    scrollFunction()
+  };
+  $(document.body).on("click", "#myBtn", function () {
+    topFunction();
   });
-        
+});
