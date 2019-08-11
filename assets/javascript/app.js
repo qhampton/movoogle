@@ -33,8 +33,11 @@ function copytext() {
 
   var copytext = addVal.select();
   document.execCommand("copy");
-  alert("Copied the message: " + copytext.val());
+  // alert("Copied the message: " + copytext.val());
   console.log(copytext.val());
+  
+  $("#message").text(copytext.val());
+  $('.modal').modal();
 
   $("#copy").val("");
 }
@@ -57,6 +60,8 @@ var foodText = $("#food-search").val(foodChoice[foodSelect]);
 $(document).ready(function () {
   // parallax display function(bt)
   $('.parallax').parallax();
+  // modal function
+  $('.modal').modal();
 
   $("#random-button").on("click", randomResult);
 
