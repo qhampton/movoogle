@@ -3,4 +3,3 @@ var yelpKey = "6I5kwV38QGc7oeIFQiuECG9wClMtE_z3JRjH_A2vZogTXe38W59haPoMSjSxt7k7_
 
 
 // eventbrite apiKey (bt)
-var eventbriteKey = "QV4ZT4DQHKFU2ZJ7LG";

@@ -10,7 +10,7 @@ var foodIndexMax = foodChoice.length;
 
 // global functions 
 
-// when the user scrolls down the button displays
+// when the user scrolls down the button displays (bt)
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
@@ -19,10 +19,24 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// When the user clicks on the button, scroll to the top of the document(bt)
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+// copy function to invite friends(bt)
+function copytext() {
+  var addVal = $("#copy");
+  $("#copy").val($("#copy").val()+" Join me for a MOVØGGLE night. The movie and food are on the way! All that's left is you.");
+  console.log(addVal.val());
+
+  var copytext = addVal.select();
+  document.execCommand("copy");
+  alert("Copied the message: " + copytext.val());
+  console.log(copytext.val());
+
+  $("#copy").val("");
 }
 
 function randomResult() {
@@ -41,14 +55,23 @@ var foodText = $("#food-search").val(foodChoice[foodSelect]);
 // =============================================================================================
 
 $(document).ready(function () {
+  // parallax display function(bt)
   $('.parallax').parallax();
+
   $("#random-button").on("click", randomResult);
 
-
+  // window scroll button(bt)
   window.onscroll = function () {
     scrollFunction()
   };
   $(document.body).on("click", "#myBtn", function () {
     topFunction();
   });
+
+  // copying message to invite friends(bt)
+  $("#copy-button").on("click", function(e){
+    e.preventDefault();
+    copytext();
+  })
+
 });
