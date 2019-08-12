@@ -44,6 +44,7 @@
             <p class="grey-text text-darken-3 lighten-3">Unsure? Let us create the options. Spin the Random button and
                 watch the choices appear. Enter your Zip and search the choices. Want something different? Spin again or
                 search specifics.</p>
+            <br>
             <div class="row">
                 <div class="col s12">
                     <button id="random-button" class="teal lighten-3 waves-effect waves-light btn-large">
@@ -62,8 +63,13 @@
     <div class="container">
         <div class="section white">
             <a id="moviesection"></a>
-            <div class="row">
+            <div class="row container center-align">
                 <h3 class="center-align">What are we watching?</h3>
+                <p class="grey-text text-darken-3 lighten-3">Add in a movie title!</p>
+                <hr>
+                <br>
+            </div>
+            <div class="row container center-align">
                 <nav class="teal lighten-3">
                     <div class="nav-wrapper">
                         <form id="movie-form">
@@ -77,107 +83,7 @@
                 </nav>
             </div>
             <br>
-            <div class="row">
-                <div class="col s12 m6 l6">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator movie-image" src="assets/images/movieplaceholder.jpg"
-                                alt="movie picture" height="150px">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4 movie-title">Movie Title<i
-                                    class="material-icons right">more_vert</i></span>
-                            <p class="year-rating">Year: 1980 Rating: pg</p>
-                            <p class="actors">Actors: </p>
-                            <p class="rotten">Rotten Tomatoes: 97%</p>
-                            <p class="trailer"><a href="#">Trailer Link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4 movie-title">Movie Title<i
-                                    class="material-icons right">close</i></span>
-                            <p class="plot">Plot to your movie or show will appear here. So excited to see what you
-                                find!</p>
-                            <table class="striped">
-                                <thead>
-                                    <tr>
-                                        <th>Where</th>
-                                        <th>Link</th>
-                                        <th>Item Price</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td>Alvin</td>
-                                        <td>Eclair</td>
-                                        <td>$0.87</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Alan</td>
-                                        <td>Jellybean</td>
-                                        <td>$3.76</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jonathan</td>
-                                        <td>Lollipop</td>
-                                        <td>$7.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l6">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator movie-image" src="assets/images/movieplaceholder.jpg"
-                                alt="movie picture" height="150px">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4 movie-title">Movie Title<i
-                                    class="material-icons right">more_vert</i></span>
-                            <p class="year-rating">Year: 1980 Rating: pg</p>
-                            <p class="actors">Actors: </p>
-                            <p class="rotten">Rotten Tomatoes: 97%</p>
-                            <p class="trailer"><a href="#">Trailer Link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4 movie-title">Movie Title<i
-                                    class="material-icons right">close</i></span>
-                            <p class="plot">Plot to your movie or show will appear here. So excited to see what you
-                                find!</p>
-                            <table class="striped">
-                                <thead>
-                                    <tr>
-                                        <th>Where</th>
-                                        <th>Link</th>
-                                        <th>Item Price</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td>Alvin</td>
-                                        <td>Eclair</td>
-                                        <td>$0.87</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Alan</td>
-                                        <td>Jellybean</td>
-                                        <td>$3.76</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jonathan</td>
-                                        <td>Lollipop</td>
-                                        <td>$7.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="row movie-card-display">
             </div>
         </div>
     </div>
@@ -190,7 +96,10 @@
         <a id="foodsection"></a>
         <div class="row container center-align">
             <h3>Who's hungry?</h3>
-            <div class="row">
+            <p class="grey-text text-darken-3 lighten-3">Search type of food or sepcific eatery!</p>
+            <hr>
+            <br>
+            <div class="row container">
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12 m5 l5">
@@ -211,25 +120,7 @@
             </div>
         </div>
         <div class="row container">
-            <div class="col s12 m8" id="food">
-
-            </div>
-            <div class="col s12 m4" id="map">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="assets/images/mapplaceholder.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Where's the food?<i
-                                class="material-icons right">more_vert</i></span>
-                        <p><a href="#">This is a link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i
-                                class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                </div>
+            <div class="col s12 m8 offset-m2" id="food">
             </div>
         </div>
     </div>
@@ -244,6 +135,8 @@
             <h3>Let's mingle!</h3>
             <p class="grey-text text-darken-3 lighten-3">Want to invite some company? Copy our invite and select where
                 you want to send your invite. Personalize it with your own photo.</p>
+            <hr>
+            <br>
             <div class="row">
                 <div class="col s12 m4 offset-m4">
                     <div class="card">
@@ -261,10 +154,12 @@
                     </div>
                     <div class="row">
                         <div class="col s3 offset-m2">
-                            <a class="waves-effect waves-light btn" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>  
+                            <a class="waves-effect waves-light btn" href="https://www.facebook.com" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a>
                         </div>
                         <div class="col s3 offset-m2">
-                            <a class="waves-effect waves-light btn" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram 3x"></i></a>  
+                            <a class="waves-effect waves-light btn" href="https://www.instagram.com" target="_blank"><i
+                                    class="fab fa-instagram 3x"></i></a>
                         </div>
                     </div>
                     <!-- Modal Structure -->
