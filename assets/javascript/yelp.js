@@ -50,7 +50,7 @@ function yelpCall() {
             var cardContact = $("<div class='card-content'>");
 
             //image
-            var resImg = $("<img>").attr("src", response.businesses[i].image_url);
+            var resImg = $("<img height='150px' width='200px'>").attr("src", response.businesses[i].image_url);
             //restaurant name
             var resName = $("<div class='card-title'>").text(response.businesses[i].name);
             //rating and price
