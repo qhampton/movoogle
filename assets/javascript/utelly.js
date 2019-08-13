@@ -50,7 +50,7 @@
             // function cardAssemble() {
 
             //Creates columns to be used within movie display section
-            var newCardContainer = $("<div class = 'col s6 card-container'>");
+            var newCardContainer = $("<div class = 'col s12 m6 l6 card-container'>");
 
             //NewCardImage
             var newCard = $("<div>").addClass("card");
