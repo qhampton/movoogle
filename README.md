@@ -1,6 +1,6 @@
 # project-1
 ## First Group Project
-
+---
 ### application name: MOVOGGLE
 
 ***application brief:*** creating an app to help in deciding what to eat and what movie to watch, all could be picked up for you, or you can decide your movie and food
