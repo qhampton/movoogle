@@ -13,6 +13,8 @@ Mingle - type in the time and place and Mingle will copy the entire card for you
 
 Randomization- If you are not sure what you want click the randomization button and it will populate the search boxes with a suggestion. Don't like it? Simply randomize again. 
 
+## Prerequisites 
+
 ***Project Goal:***
 Build Something Awesome
 
