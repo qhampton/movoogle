@@ -38,5 +38,5 @@ Simple follow our live link to get to the page: https://qhampton.github.io/proje
 * OMDB - API used to get the details and any other info about the show/movie
 * Yelp - API used to find local restaurants or search type of foods around user's area 
 * jQ library - to make js simple and ability to run ajaxs
-* Materialize - the website framework and UI
+* Materialize - the website framework and UI along with their js library for page functionality 
 
