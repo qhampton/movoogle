@@ -1,17 +1,30 @@
-# project-1
-## First Group Project
+# First Group Project: MOVOGGLE
 ---
-### application name: MOVOGGLE
+Movie. Food. Mingle. With this one stop shop web application, we have taken the hastle out of decision making. With our clean search section find out where to wartch your favorite movie and they type of food your craving. Not sure what to do? No problem - with our randomization button we have inject your night in or date night with some spotanaity. Once you're done setting the night up. Copy out your plans in our mingle section and send it out one or all your friends. Movoggle -decision making made simple. 
 
-***application brief:*** creating an app to help in deciding what to eat and what movie to watch, all could be picked up for you, or you can decide your movie and food
+## Getting Started 
 
-***application functionality:*** enter your zip code, search for food and/or movie ... or you can hit a randomize to have a combo of a movie and food picked up for you! 
+## Prequisites:
+***Project Goal:***
+Build Something Awesome
+***Requirements:***
+Must uses at least two APIs
+Must use AJAX to pull data
+Must utilize at least one new library or technology that we haven’t discussed
+Must have a polished frontend / UI
+Must meet good quality coding standards (indentation, scoping, naming)
+Must NOT use alerts, confirms, or prompts (look into modals!)
+Must have some sort of repeating element (table, columns, etc)
+Must use Bootstrap or Alternative CSS Framework
+Must be Deployed (GitHub Pages or Firebase)
+Must have User Input Validation
 
-you can also socialize with your friends at the same time by navigating one of the social media links provided to you in the app or through a text message, all provided to you through the application.
+## Installing:
+Simple follow our live link to get to the page: https://qhampton.github.io/project-1/
 
-***tools used:*** 
-* Utelly
-* OMDB
-* Uelp
-* jQ library
-* Materialize 
+## Built With: 
+* Utelly - API used to find out where the material is streamed 
+* OMDB - API used to get the detials and any other info about the show/movie
+* Yelp - API used to find local resturants or search type of foods around user's area 
+* jQ library - to make js simple and ablility to run ajaxs
+* Materialize - the website framework and UI
